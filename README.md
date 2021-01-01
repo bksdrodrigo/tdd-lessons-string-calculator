@@ -21,34 +21,29 @@
 
 ```Source: https://kata-log.rocks/string-calculator-kata```
 
-# First Test
+# TDD Basics - Red, Green, Refactor
 
 ## Learning Objective
 
-- Learn basics of JEST test execution.
+- Learn the 3 rules of TDD
+- Focus on Red, Green, Refactor Cycle
+- KISS Principle - Philosophy of coding
 
 ## Notes
 
-Ensure that the framework is working and we can execute the tests.
+- TDD has 3 simple rules.
+  - Never write production code before writing a failing test
+  - Only write enough test to prove failure and compiler issues are considered failures.
+  - Only write enough production code to pass the failing test.
 
-- Need to ensure all node packages are installed. Issue the following command at the project root
+- While adhering to the above 3 rules, we will write tests by following the Red, Green, Refactor methodology
+  - First We write a failing Test and confirm the tests are failing (RED state)
+  - We write production code to fix the failing test. And We write ONLY enough production code to pass the test (GREEN state)
+  - Then we refactor both the test and production code.
 
-  ```npm install```
-
-- Writing the first test as a dummy test. Start by creating a new file called ```base.test.ts``` withint ```/__tests__/``` folder.
-
-- We will use a simple ```expect(true).toBe(true)``` to compare the boolean value 'true' to 'true'.
-
-- Issue the following command at the project root and ensure the test is running.
-
-  ```npm test```
-
-- You can also issue the following command to ensure only 'base.test.ts' file is executed.
-
-  ```npm test base.test```
-
-- You can also run the tests in 'watch' mode. I.e. JEST will automatically run the test when we have made any changes to the source files. To run test in watch mode issue the following command at the project root.
-
-  ```npm test base.test -- --watch```
-
-  Obviously, if you omit the file name part 'base.test' the whole test suite will run in watch mode.
+- Our philosophy of coding is to following the KISS Principle
+  - **K**eep **I**t **S**imple **S**tupid
+  - This means few things
+    - We will start with the simplest test possible and increment the complexity of the test cases as we progress
+    - We will write the simplest and sometimes stupidest production code to pass the **current** failing test
+    - We give high regards for the simplicity and elegance of the code we write. I.e. we believe Simple is the best
