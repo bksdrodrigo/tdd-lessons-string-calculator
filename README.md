@@ -15,6 +15,8 @@
 
 Ensure that the framework is working and we can execute the tests.
 
+- VSCode Environment and Extensions
+
 - Need to ensure all node packages are installed. Issue the following command at the project root
 
   ```npm install```
